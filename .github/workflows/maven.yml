@@ -27,7 +27,7 @@ jobs:
         mvn clean
         mvn -B package --file pom.xml
     -name: build docker image
-    uses: mr-smithers-excellent/docker-build-push@v5
+    -uses: mr-smithers-excellent/docker-build-push@v5
     with:
       image: iyage/demo-app
       registry: docker.io
