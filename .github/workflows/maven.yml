@@ -29,7 +29,8 @@ jobs:
 
     - name: Build, Push and Deploy to Heroku
       id: heroku
-      uses: akhileshns/heroku-deploy@v3.12.12
+      uses: jctaveras/heroku-deploy@v1.0.0
+#      akhileshns/heroku-deploy@v3.12.12
 #      jctaveras/heroku-deploy@v1.0.0
       with:
           email: ${{ secrets.HEROKU_EMAIL }}
