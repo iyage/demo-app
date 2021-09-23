@@ -27,7 +27,7 @@ jobs:
         mvn clean
         mvn -B package --file pom.xml
 
-    - name: Deploy to Heroku
+    - name: Deploy to Heroku website
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
