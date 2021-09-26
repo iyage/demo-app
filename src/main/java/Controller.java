@@ -4,6 +4,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class Controller {
     @GetMapping("/page1")
     public  String showPage1(){
-        return "page1";
+        return "pag1";
     }
 }
