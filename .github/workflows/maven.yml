@@ -33,7 +33,7 @@ jobs:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
         heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
         heroku_email: ${{ secrets.HEROKU_EMAIL }}
-        usedocker: false
+#         usedocker: false
         stack: false
     - name: buid docker image and push to dockerhub
       uses: mr-smithers-excellent/docker-build-push@v3
