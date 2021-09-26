@@ -28,8 +28,7 @@ jobs:
         mvn -B package --file pom.xml
 
     - name: Deploy to Heroku website
-      env:
-        server:
+      server:
           port: $PORT
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
