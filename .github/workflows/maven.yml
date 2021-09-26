@@ -36,8 +36,7 @@ jobs:
         usedocker: true
         stack: 'container'
         env:
-          server:
-            port: $PORT
+          port: $PORT
     - name: buid docker image and push to dockerhub
       uses: mr-smithers-excellent/docker-build-push@v3
       with:
