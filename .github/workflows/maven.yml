@@ -35,8 +35,6 @@ jobs:
         heroku_email: ${{ secrets.HEROKU_EMAIL }}
         usedocker: true
         stack: 'container'
-        server:
-          port: $PORT
     - name: buid docker image and push to dockerhub
       uses: mr-smithers-excellent/docker-build-push@v3
       with:
