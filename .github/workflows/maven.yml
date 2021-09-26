@@ -28,8 +28,6 @@ jobs:
         mvn -B package --file pom.xml
 
     - name: Deploy to Heroku website
-      server:
-          port: $PORT
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
@@ -37,6 +35,9 @@ jobs:
         heroku_email: ${{ secrets.HEROKU_EMAIL }}
         usedocker: true
         stack: 'container'
+        env:
+          server:
+            port: $PORT
     - name: buid docker image and push to dockerhub
       uses: mr-smithers-excellent/docker-build-push@v3
       with:
